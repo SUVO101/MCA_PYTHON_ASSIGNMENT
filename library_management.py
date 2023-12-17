@@ -9,8 +9,11 @@ class library:
         else:
             self.books_in_stock[book_name] = 1
     def display(self):
+        print(f"| {'Book':<15} | {'Stock':<10} |")
+        print(f"+{'-'*17}+{'-'*12}+")
         for name,stock in self.books_in_stock.items():
-            print(f"Book - > {name}  , Stock - > {stock}")
+            # print(f"Book - > {name}  , Stock - > {stock}")
+            print(f"| {name:<15} | {stock:<10} |")
 
 obj=library()
 obj.add('Harry potter')
